@@ -1,0 +1,200 @@
+body{
+    min-height: 100vh;
+    background-image: url("9.jpg");
+    background-attachment: fixed;
+}
+.open h1{
+    font-size: 46px;
+    color: gray;
+    text-align: center;
+    margin: 50px 0;
+    text-shadow: 1px 5px 6px rgb(235, 225, 174);
+}
+
+.fotoawal{
+    overflow: hidden;
+}
+h2{
+    font-size: 50px;
+    color:gray;
+    text-align: center;
+    text-shadow: grey;
+}
+.about{
+    opacity: 0;
+    transform:translate(0, -40px);
+    transition: .2s;
+}
+
+.about.muncul{
+    transform:translate(0,0);
+    opacity: 1;
+}
+.halaman2{
+    min-height: 100vh;
+    background-image: url("12.jpg");
+    font-size: 25px;
+    color: gray;
+    text-align: center;
+    opacity: 0;
+    transform:translate(0, -40px);
+    transition: .5s;
+}
+
+.halaman2.muncul{
+    transform:translate(0,0);
+    opacity: 1;
+}
+
+.container p{
+    text-align: center;
+    font-size: large;
+    color: gray;
+    font-family: 'Marck Script', cursive;
+}
+
+.open h1{
+    opacity:0;
+    transform:translate(0, -40px);
+    transition: .5s;
+}
+
+.open h1.pMuncul{
+    transform:translate(0,0);
+    opacity: 1;
+}
+
+ol{
+    font-size: 25px;
+    color: gray;;
+}
+ul{
+    font-size: 25px;
+    color: gray;;
+}
+.container{
+    width:620px ;
+    background-image: url("11.jpg");
+    margin: auto;
+    padding :1px;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,.3);
+    border-radius: 5px;
+}
+
+.galery li{
+    width:120px;
+    height: 120px;
+    /*overflow: hidden;*/
+    border :5px solid #666;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+.galery li,
+.galery li img,
+.galery li span{
+    border-radius: 50%;
+}
+
+.galery li span{
+    display: block;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(200, 200, 200, 0.5);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    color: #333;
+    text-shadow: 1px 1px 1px #ddd ;
+    opacity: 0;
+    transition: .3s;
+    transform: scale(0) rotate(0);
+}
+.galery li a:hover span{
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+}
+
+
+.clear{
+    clear: both;
+}
+
+.endimg img{
+    float:left;
+    width:30vw;
+}
+
+
+.riwayat h2{
+    text-align: left;
+}
+
+.sosialmedia h2{
+    text-align: left;
+}
+
+/* ol */
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.0);
+    z-index: 9999;
+    transition: 1s;
+    text-align: center;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.7);
+    padding: 100px;
+}
+
+.overlay img{
+    max-height: 100%;
+    box-shadow: 2px 2px 10px rgba(0,0,0,.8);
+}
+
+.overlay:target img {
+    animation: zoomDanFade 1s;
+}
+
+.overlay .close{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -45px;
+    color: seashell;
+    text-decoration: none;  
+}
+.sosmed{
+    margin: auto;
+    width:400px;
+}
+.sosmed li{
+    padding: 20px;
+    float: left;
+
+}
+
+/*animasi*/
+@keyframes zoomDanFade {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
